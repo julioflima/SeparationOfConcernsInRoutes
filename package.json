@@ -1,0 +1,19 @@
+{
+  "name": "MobileECG",
+  "version": "2.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/juloko/MobileECG.git",
+  "author": "juloko",
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "packages/firebase/*",
+      "packages/shared/*"
+    ]
+  },
+  "devDependencies": {
+    "@MobileECG/eslint-config": "*",
+    "nodemon": "^2.0.4"
+  },
+  "private": true
+}

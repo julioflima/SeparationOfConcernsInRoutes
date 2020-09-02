@@ -1,0 +1,9 @@
+{
+  "name": "@MobileECG/Database",
+  "version": "1.0.0",
+  "main": "Database.js",
+  "license": "MIT",
+  "dependencies": {
+    "@MobileECG/Api":"*"
+  }
+}

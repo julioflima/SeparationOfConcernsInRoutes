@@ -1,0 +1,13 @@
+### Cloud
+GET http://mobileecgufc.web.app/name?year=2020
+### Cloud
+POST  http://mobileecgufc.web.app/sensor?name=electromyografy
+Content-Type: application/json
+{
+  "value":1,
+  "date":"17-09-2020 01:32:01:30",
+  "timestamp":1231231434
+}
+### Cloud
+DELETE http://mobileecgufc.web.app/name=electromyografy&timestamp=1231231434
+
