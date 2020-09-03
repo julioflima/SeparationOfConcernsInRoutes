@@ -108,7 +108,6 @@ module.exports = class SensorController {
       const { timestamp } = req.body;
       const nameSubCollection = Number(timestamp).toString();
       const path = `/${nameCollection}/${name}/${nameSubCollection}`;
-      console.log(path)
 
       await deleteCollection(db, path, 1);
 

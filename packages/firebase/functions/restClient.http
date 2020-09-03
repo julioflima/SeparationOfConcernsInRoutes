@@ -1,5 +1,8 @@
 ### Host: Cloud
-GET http://mobileecgufc.web.app/name?year=2020
+GET http://mobileecgufc.web.app/sensorTimestamps?name=electromyografy
+
+
+GET http://mobileecgufc.web.app/sensor?name=electromyografy
 ###
 POST  http://mobileecgufc.web.app/sensor?name=electromyografy
 Content-Type: application/json
