@@ -1,3 +1,3 @@
-config = require('@brother.bet/eslint-config');
+config = require('@MobileECG/eslint-config');
 
 module.exports = config;

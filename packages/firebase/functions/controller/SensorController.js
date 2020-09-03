@@ -1,19 +1,19 @@
 /* eslint-disable no-shadow */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-useless-catch */
-/* eslint-disable class-methods-use-this */
 const admin = require('firebase-admin');
 
 const db = admin.firestore();
 
 const nameCollection = 'ufc';
 
-module.exports = class Sensor {
-  async index(req, res) {
-    const { name } = req.query;
-    const files = [];
-    const snapshots = [];
+module.exports = class SensorController {
+  static async index(req, res) {
     try {
+      const { name } = req.query;
+      const files = [];
+      const snapshots = [];
+
       const collections = await db.collection(nameCollection).doc(name).listCollections();
       const timestamps = collections.map((col) => col.id);
 
@@ -32,9 +32,10 @@ module.exports = class Sensor {
     }
   }
 
-  async show(req, res) {
-    const { name } = req.query;
+  static async show(req, res) {
     try {
+      const { name } = req.query;
+
       const collections = await db.collection(nameCollection).doc(name).listCollections();
       const collectionIds = collections.map((col) => col.id);
 
@@ -44,16 +45,17 @@ module.exports = class Sensor {
     }
   }
 
-  async store(req, res) {
-    const { name } = req.query;
-    const { date, value, timestamp } = req.body;
-    const data = { date, value, timestamp };
-
+  static async store(req, res) {
     try {
+      const { name } = req.query;
+      const { date, value, timestamp } = req.body;
+      const data = { date, value, timestamp };
+      const nameSubCollection = Number(timestamp).toString();
+
       const response = await db
         .collection(nameCollection)
         .doc(name)
-        .collection(timestamp)
+        .collection(nameSubCollection)
         .doc()
         .set(data);
 
@@ -63,26 +65,30 @@ module.exports = class Sensor {
     }
   }
 
-  async delete(req, res) {
+  static async delete(req, res) {
     const deleteCollection = async (db, collectionPath, batchSize) => {
       const deleteQueryBatch = async (db, query, resolve) => {
-        const snapshot = await query.get();
+        try {
+          const snapshot = await query.get();
 
-        const batchSize = snapshot.size;
-        if (batchSize === 0) {
-          resolve();
-          return;
+          const batchSize = snapshot.size;
+          if (batchSize === 0) {
+            resolve();
+            return;
+          }
+
+          const batch = db.batch();
+          snapshot.docs.forEach((doc) => {
+            batch.delete(doc.ref);
+          });
+          await batch.commit();
+
+          process.nextTick(() => {
+            deleteQueryBatch(db, query, resolve);
+          });
+        } catch (error) {
+          throw error;
         }
-
-        const batch = db.batch();
-        snapshot.docs.forEach((doc) => {
-          batch.delete(doc.ref);
-        });
-        await batch.commit();
-
-        process.nextTick(() => {
-          deleteQueryBatch(db, query, resolve);
-        });
       };
 
       try {
@@ -99,7 +105,8 @@ module.exports = class Sensor {
 
     try {
       const { name, timestamp } = req.query;
-      const path = `/${nameCollection}/${name}/${timestamp}`;
+      const nameSubCollection = Number(timestamp).toString();
+      const path = `/${nameCollection}/${name}/${nameSubCollection}`;
 
       await deleteCollection(db, path, 1);
 

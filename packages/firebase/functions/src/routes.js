@@ -1,66 +1,24 @@
+/* eslint-disable no-unused-expressions */
+const { celebrate } = require('celebrate');
 const express = require('express');
-const { celebrate, Segments, Joi } = require('celebrate');
 
-const FirestoreInit = require('../model/FirestoreInit');
-const serviceAccountKey = require('../model/serviceAccountKey.json');
+const FirestoreInit = require('../model/config/FirestoreInit');
+const serviceAccountKey = require('../model/config/serviceAccountKey.json');
 
-// eslint-disable-next-line no-unused-expressions
 new FirestoreInit(serviceAccountKey).admin;
 
-const Sensor = require('../controller/Sensor');
-
-const sensor = new Sensor();
+const SensorDTO = require('../model/SensorDTO');
+const SensorRule = require('../rule/SensorRule');
+const SensorController = require('../controller/SensorController');
 
 const routes = express.Router();
 
-routes.get('/sensor', sensor.index);
+routes.get('/sensorTimestamps', celebrate(SensorDTO.getSensor()), SensorController.show);
 
-routes.get('/sensor', sensor.show);
+routes.get('/sensor', celebrate(SensorDTO.getSensor()), SensorController.index);
 
-routes.get(
-  '/sensor',
-  celebrate({
-    [Segments.QUERY]: Joi.object().keys({
-      name: Joi.string().required(),
-    }),
-  }),
-  sensor.index
-);
+routes.post('/sensor', SensorRule.date, celebrate(SensorDTO.postSensor()), SensorController.store);
 
-routes.get(
-  '/sensor',
-  celebrate({
-    [Segments.QUERY]: Joi.object().keys({
-      name: Joi.string().required(),
-    }),
-  }),
-  sensor.show
-);
-
-routes.post(
-  '/sensor',
-  celebrate({
-    [Segments.QUERY]: Joi.object().keys({
-      name: Joi.string().required(),
-    }),
-    [Segments.BODY]: Joi.object().keys({
-      value: Joi.string().required(),
-      date: Joi.string().required(),
-      timestamp: Joi.string().required(),
-    }),
-  }),
-  sensor.store
-);
-
-routes.delete(
-  '/sensor',
-  celebrate({
-    [Segments.QUERY]: Joi.object().keys({
-      name: Joi.string().required(),
-      timestamp: Joi.string().required(),
-    }),
-  }),
-  sensor.delete
-);
+routes.delete('/sensor', celebrate(SensorDTO.deleteSensor()), SensorController.delete);
 
 module.exports = routes;
