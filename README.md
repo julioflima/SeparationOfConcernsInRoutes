@@ -90,7 +90,7 @@
   > }	
   > ```	
   
-  `` DELETE http://mobileecgufc.web.app/name=electromyografy&timestamp=1231231434 ``	
+  `` DELETE http://mobileecgufc.web.app/name=electromyografy ``	
   > ``` http	
   > Content-Type: application/json 	
   > {	
