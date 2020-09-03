@@ -53,13 +53,11 @@
       Em seguida copie a URL de GET no tópico API abaixo, modifique "electromyografy" para o nome do sensor desejado.
     </li>
     </ol>
-    
-    
 </p>
    
 <p align="left">
    <h2 align="left">Api</h2>	
-   <p align="left">Pega todos os timestamps cadastrados neste sensor, caso queira se remover algum dado.</p>
+   <h5 align="left">Pega todos os timestamps cadastrados neste sensor, caso queira se remover algum dado.</h5>
    
   `` GET http://mobileecgufc.web.app/sensorTimestamps?name=electromyografy ``	
   > ``` http	
@@ -73,9 +71,7 @@
   > ]	
   > ```	
 
-
-
-  <p align="left">Pega todos os dados cadastrados neste sensor.</p>
+  <h5 align="left">Pega todos os dados cadastrados neste sensor.</h5>
   
   `` GET https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
@@ -94,9 +90,8 @@
   >   },	
   > ]	
   > ```	
-  
-  
-  <p align="left">Cadastra um novo dado na tabela deste sensor.</p>
+    
+  <h5 align="left">Cadastra um novo dado na tabela deste sensor.</h5>
   
     `` POST https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
@@ -107,10 +102,8 @@
   >   "timestamp":1231231434	
   > }	
   > ```	
-  
-  
-  
-  <p align="left">Deleta um dado deste sensor, de acordo com o timestamp.</p>
+    
+  <h5 align="left">Deleta um dado deste sensor, de acordo com o timestamp.</h5>
   
   `` DELETE https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
