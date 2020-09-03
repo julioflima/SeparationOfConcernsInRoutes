@@ -29,20 +29,40 @@
 
 <p align="left">
   <h2 align="left">
-    <a href="https://http://www.ufc.br/">
+    <a href="https://github.com/juloko/MobileECG/blob/master/project.pdf">
       Projeto
     </a>
     
   </h2>	
   <p align="left">
-      Confira a proposta na integra.
+      Confira a proposta na íntegra.
    </p>
+</p>
+ 
+<p align="left">
+  <h2 align="left">
+    <a href="https://github.com/juloko/MobileECG/blob/master/project.pdf">
+      Visulização do Bancode Dados
+    </a>
+    
+  </h2>	
+  <p align="left">
+    <ol>
+    <li>
+      Para uma melhor visualização do banco de dados de cada sensor, você pode utilizar o próprio navegador, para isso tenha instalado em sua máquina o Chrome  baixe a extensão no senguinte <a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh">link</a>.
+    </li>
+    <li>
+      Em seguida copie a URL de GET no tópico API abaixo, modifique "electromyografy" para o nome do sensor desejado.
+    </li>
+    </ol>
+    
+    
 </p>
    
 <p align="left">
    <h2 align="left">Api</h2>	
 
-  `` GET http://mobileecgufc.web.app/name?year=2020 ``	
+  `` GET https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > HTTP/1.1 200 OK	
   > Content-Type: application/json 	
@@ -59,7 +79,8 @@
   >   },	
   > ]	
   > ```	
-  `` POST  http://mobileecgufc.web.app/sensor?name=electromyografy ``	
+  
+  `` POST https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > Content-Type: application/json 	
   > {	
@@ -68,17 +89,17 @@
   >   "timestamp":1231231434	
   > }	
   > ```	
-  `` DELETE http://mobileecgufc.web.app/name=electromyografy&timestamp=1231231434 ``	
+  
+  `` DELETE https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > Content-Type: application/json 	
   > {	
   >   "timestamp":1231231434	
   > }	
   > ```	
-</p>	</p>
-
-
-
+  > ``` http	
+  > HTTP/1.1 200 OK
+  > Content-Type: application/json 	
+  > Timestamp "1231231434", of sensor "electromyografy"  deleted!
+  > ```	
 </p>
-
-
