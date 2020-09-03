@@ -17,13 +17,13 @@
 
 <p align="left">
   <h2 align="left">
-    <a href="https://http://www.ufc.br/">
+    <a href="https://mobileecgufc.web.app/">
       Demonstração
     </a>
     
   </h2>	
   <p align="left">
-   Nesse site você poderá selecionar o sensor e ver sua atualização em tempo real.
+   Você poderá selecionar o sensor e ver sua atualização em tempo real, clicando nesse <a href="https://mobileecgufc.web.app/">link</a>.
    </p>
 </p>
 
@@ -34,13 +34,15 @@
     </a>
   </h2>	
   <p align="left">
-      Confira a proposta na íntegra.
+      Confira a proposta na íntegra, clicando nesse <a href="https://github.com/juloko/MobileECG/blob/master/project.pdf">link</a>.
    </p>
 </p>
  
 <p align="left">
   <h2 align="left">
+    <a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh">
       Visulização do Bancode Dados
+    </a>
   </h2>	
   <p align="left">
     <ol>
