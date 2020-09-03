@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://en.wikipedia.org">
+  <a href="https://github.com/juloko/MobileECG/blob/master/project.pdf">
     <img src="https://user-images.githubusercontent.com/17098382/92084131-52061480-ed9d-11ea-9acd-ec209bbed243.png" align="center" weight="400px"  margin="200px"/>
     </a>
     <span align="center" weight="400px"  margin="200px">
