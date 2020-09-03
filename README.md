@@ -47,9 +47,16 @@
     
   </h2>	
   <p align="left">
-    1. Para uma melhor visualização do banco de dados de cada sensor, você pode utilizar o próprio navegador, para isso tenha instalado em sua máquina o Chrome  baixe a extensão no senguinte <a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh">link</a>.
+    <ol>
+    <li>
+      Para uma melhor visualização do banco de dados de cada sensor, você pode utilizar o próprio navegador, para isso tenha instalado em sua máquina o Chrome  baixe a extensão no senguinte <a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh">link</a>.
+    </li>
+    <li>
+      Em seguida copie a URL de GET no tópico API abaixo, modifique "electromyografy" para o nome do sensor desejado.
+    </li>
+    </ol>
     
-    2. Em seguida copie a URL de GET no tópico API abaixo, modifique "electromyografy" para o nome do sensor desejado.
+    
 </p>
    
 <p align="left">
