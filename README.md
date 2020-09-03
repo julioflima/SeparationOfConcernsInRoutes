@@ -62,7 +62,7 @@
 <p align="left">
    <h2 align="left">Api</h2>	
 
-  `` GET http://mobileecgufc.web.app/name?electromyografy=2020 ``	
+  `` GET http://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > HTTP/1.1 200 OK	
   > Content-Type: application/json 	
@@ -79,6 +79,7 @@
   >   },	
   > ]	
   > ```	
+  
   `` POST  http://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > Content-Type: application/json 	
@@ -88,6 +89,7 @@
   >   "timestamp":1231231434	
   > }	
   > ```	
+  
   `` DELETE http://mobileecgufc.web.app/name=electromyografy&timestamp=1231231434 ``	
   > ``` http	
   > Content-Type: application/json 	
