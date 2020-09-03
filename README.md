@@ -40,9 +40,7 @@
  
 <p align="left">
   <h2 align="left">
-    <a href="https://github.com/juloko/MobileECG/blob/master/project.pdf">
       Visulização do Bancode Dados
-    </a>
   </h2>	
   <p align="left">
     <ol>
