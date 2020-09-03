@@ -93,7 +93,7 @@
     
   <h5 align="left">Cadastra um novo dado na tabela deste sensor.</h5>
   
-    `` POST https://mobileecgufc.web.app/sensor?name=electromyografy ``	
+  `` POST https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > Content-Type: application/json 	
   > {	
