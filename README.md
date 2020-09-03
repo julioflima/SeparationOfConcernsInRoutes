@@ -15,9 +15,30 @@
   A <strong>Mobile ECG</strong> visa o desenvolvimento de uma plataforma aberta móvel de aquisição, análise automática e compartilhamento de sinais e dados cardiológicos para fins de pesquisa em ambiente colaborativo.
 </p>
 
+<p align="left">
+  <h2 align="left">
+    <a href="https://http://www.ufc.br/">
+      Demonstração
+    </a>
+    
+  </h2>	
+  <p align="left">
+   Nesse site você poderá selecionar o sensor e ver sua atualização em tempo real.
+   </p>
+</p>
 
-
-
+<p align="left">
+  <h2 align="left">
+    <a href="https://http://www.ufc.br/">
+      Projeto
+    </a>
+    
+  </h2>	
+  <p align="left">
+      Confira a proposta na integra.
+   </p>
+</p>
+   
 <p align="left">
    <h2 align="left">Api</h2>	
 
