@@ -78,6 +78,6 @@
   > ``` http	
   > HTTP/1.1 200 OK
   > Content-Type: application/json 	
-  > Collection "1231231435", of sensor electromyografy  deleted!	
+  > Timestamp "1231231434", of sensor "electromyografy"  deleted!
   > ```	
 </p>
