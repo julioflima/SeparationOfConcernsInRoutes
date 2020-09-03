@@ -1,9 +1,4 @@
-![logoMobileECG](https://user-images.githubusercontent.com/17098382/92084131-52061480-ed9d-11ea-9acd-ec209bbed243.png)
-
-
-![Brasao4_vertical_cor_300dpi](https://user-images.githubusercontent.com/17098382/92084392-b45f1500-ed9d-11ea-8ec9-09c7f1283b2c.png)
-
-<a href="https://en.wikipedia.org"><img src="https://user-images.githubusercontent.com/17098382/92084392-b45f1500-ed9d-11ea-8ec9-09c7f1283b2c.png" align="left" height="170" /></a>
+<a href="https://en.wikipedia.org"><img src="https://user-images.githubusercontent.com/17098382/92084131-52061480-ed9d-11ea-9acd-ec209bbed243.png" align="left" height="170" /></a>
 <a href="https://http://www.ufc.br/"><img src="https://user-images.githubusercontent.com/17098382/92084392-b45f1500-ed9d-11ea-8ec9-09c7f1283b2c.png" align="right" height="170" /></a>
 
 <h1 align="center">Mobile ECG</h1>
