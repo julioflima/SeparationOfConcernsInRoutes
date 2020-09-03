@@ -104,13 +104,15 @@ module.exports = class SensorController {
     };
 
     try {
-      const { name, timestamp } = req.query;
+      const { name } = req.query;
+      const { timestamp } = req.body;
       const nameSubCollection = Number(timestamp).toString();
       const path = `/${nameCollection}/${name}/${nameSubCollection}`;
+      console.log(path)
 
       await deleteCollection(db, path, 1);
 
-      res.status(200).send(`Collection "${timestamp}", of sensor ${name}  deleted!`);
+      res.status(200).send(`Timestamp "${timestamp}", of sensor "${name}"  deleted!`);
     } catch (error) {
       throw error;
     }

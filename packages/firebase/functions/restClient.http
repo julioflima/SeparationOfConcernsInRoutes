@@ -10,8 +10,12 @@ Content-Type: application/json
   "timestamp":1231231434
 }
 ###
-DELETE http://mobileecgufc.web.app/name=electromyografy&timestamp=1231231434
+DELETE http://mobileecgufc.web.app/sensor?name=electromyografy
+Content-Type: application/json
 
+{
+  "timestamp":1231231435
+}
 
 
 
@@ -27,12 +31,12 @@ POST  http://localhost:5000/sensor?name=electromyografy
 Content-Type: application/json
 
 {
-  "value":3,
-  "timestamp":1231231436
+  "value":4,
+  "timestamp":1231231437
 }
 
 ###
-DELETE http://localhost:5000/name=electromyografy
+DELETE http://localhost:5000/sensor?name=electromyografy
 Content-Type: application/json
 
 {

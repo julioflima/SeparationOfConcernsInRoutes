@@ -34,6 +34,8 @@ module.exports = class SensorDTO {
     return {
       [Segments.QUERY]: Joi.object().keys({
         name: Joi.string().required(),
+      }),
+      [Segments.BODY]: Joi.object().keys({
         timestamp: Joi.number().integer().required(),
       }),
     };
