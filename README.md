@@ -35,7 +35,7 @@
     
   </h2>	
   <p align="left">
-      Confira a proposta na integra.
+      Confira a proposta na íntegra.
    </p>
 </p>
    
