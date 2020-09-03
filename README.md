@@ -60,6 +60,7 @@
 <p align="left">
    <h2 align="left">Api</h2>	
    <p align="left">Pega todos os timestamps cadastrados neste sensor, caso queira se remover algum dado.</p>
+   
   `` GET http://mobileecgufc.web.app/sensorTimestamps?name=electromyografy ``	
   > ``` http	
   > HTTP/1.1 200 OK	
@@ -74,6 +75,7 @@
 
 
   <p align="left">Pega todos os dados cadastrados neste sensor.</p>
+  
   `` GET https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > HTTP/1.1 200 OK	
@@ -94,6 +96,7 @@
   
   
   <p align="left">Cadastra um novo dado na tabela deste sensor.</p>
+  
     `` POST https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > Content-Type: application/json 	
@@ -106,6 +109,7 @@
   
   
   <p align="left">Deleta um dado deste sensor, de acordo com o timestamp.</p>
+  
   `` DELETE https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > Content-Type: application/json 	
