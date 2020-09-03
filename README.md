@@ -5,9 +5,6 @@
 `` GET http://mobileecgufc.web.app/name?year=2020 ``
 > ``` http
 > HTTP/1.1 200 OK
-> ```
-
-> ``` http
 > Content-Type: application/json 
 > [
 >   {
