@@ -75,10 +75,9 @@
   >   "timestamp":1231231434	
   > }	
   > ```	
-</p>	</p>
-
-
-
+  > ``` http	
+  > HTTP/1.1 200 OK
+  > Content-Type: application/json 	
+  > Collection "1231231435", of sensor electromyografy  deleted!	
+  > ```	
 </p>
-
-
