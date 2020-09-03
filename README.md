@@ -80,7 +80,7 @@
   > ]	
   > ```	
   
-  `` POST  http://mobileecgufc.web.app/sensor?name=electromyografy ``	
+  `` POST http://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > Content-Type: application/json 	
   > {	
@@ -90,7 +90,7 @@
   > }	
   > ```	
   
-  `` DELETE http://mobileecgufc.web.app/name=electromyografy ``	
+  `` DELETE http://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > Content-Type: application/json 	
   > {	
