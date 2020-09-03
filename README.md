@@ -74,6 +74,7 @@
   > ```	
 
 
+
   <p align="left">Pega todos os dados cadastrados neste sensor.</p>
   
   `` GET https://mobileecgufc.web.app/sensor?name=electromyografy ``	
@@ -106,6 +107,7 @@
   >   "timestamp":1231231434	
   > }	
   > ```	
+  
   
   
   <p align="left">Deleta um dado deste sensor, de acordo com o timestamp.</p>
