@@ -29,7 +29,7 @@
 
 <p align="left">
   <h2 align="left">
-    <a href="https://http://www.ufc.br/">
+    <a href="https://github.com/juloko/MobileECG/blob/master/project.pdf">
       Projeto
     </a>
     
