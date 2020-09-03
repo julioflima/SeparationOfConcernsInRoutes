@@ -1,4 +1,7 @@
 <h1 align="center">Mobile ECG</h1>
+<p align="left">
+  A <strong>Mobile ECG</strong> visa o desenvolvimento de uma plataforma aberta móvel de aquisição, análise automática e compartilhamento de sinais e dados cardiológicos para fins de pesquisa em ambiente colaborativo.
+</p>
 
 <p align="left">
   <a href="https://en.wikipedia.org">
