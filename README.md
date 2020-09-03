@@ -32,7 +32,6 @@
     <a href="https://github.com/juloko/MobileECG/blob/master/project.pdf">
       Projeto
     </a>
-    
   </h2>	
   <p align="left">
       Confira a proposta na íntegra.
@@ -44,7 +43,6 @@
     <a href="https://github.com/juloko/MobileECG/blob/master/project.pdf">
       Visulização do Bancode Dados
     </a>
-    
   </h2>	
   <p align="left">
     <ol>
@@ -55,13 +53,26 @@
       Em seguida copie a URL de GET no tópico API abaixo, modifique "electromyografy" para o nome do sensor desejado.
     </li>
     </ol>
-    
-    
 </p>
    
 <p align="left">
    <h2 align="left">Api</h2>	
+   <h5 align="left">Pega todos os timestamps cadastrados neste sensor, caso queira se remover algum dado.</h5>
+   
+  `` GET http://mobileecgufc.web.app/sensorTimestamps?name=electromyografy ``	
+  > ``` http	
+  > HTTP/1.1 200 OK	
+  > Content-Type: application/json 	
+  > [	
+  >   "1231231434",
+  >   "1231231435",
+  >   "1231231436",
+  >   "1231231437"
+  > ]	
+  > ```	
 
+  <h5 align="left">Pega todos os dados cadastrados neste sensor.</h5>
+  
   `` GET https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > HTTP/1.1 200 OK	
@@ -79,8 +90,10 @@
   >   },	
   > ]	
   > ```	
+    
+  <h5 align="left">Cadastra um novo dado na tabela deste sensor.</h5>
   
-  `` POST https://mobileecgufc.web.app/sensor?name=electromyografy ``	
+    `` POST https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
   > Content-Type: application/json 	
   > {	
@@ -89,6 +102,8 @@
   >   "timestamp":1231231434	
   > }	
   > ```	
+    
+  <h5 align="left">Deleta um dado deste sensor, de acordo com o timestamp.</h5>
   
   `` DELETE https://mobileecgufc.web.app/sensor?name=electromyografy ``	
   > ``` http	
