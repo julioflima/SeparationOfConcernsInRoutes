@@ -1,7 +1,7 @@
 <h1 align="center">Mobile ECG</h1>
 
 <h1 align="left">Api</h2>
-```
+`
 ### Host: Cloud
 GET http://mobileecgufc.web.app/name?year=2020
 ###
@@ -14,6 +14,4 @@ Content-Type: application/json
   "timestamp":1231231434
 }
 ###
-DELETE http://mobileecgufc.web.app/name=electromyografy&timestamp=1231231434
-
-```
+`` DELETE http://mobileecgufc.web.app/name=electromyografy&timestamp=1231231434 ``
