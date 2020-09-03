@@ -38,11 +38,23 @@
       Confira a proposta na íntegra.
    </p>
 </p>
+ 
+<p align="left">
+  <h2 align="left">
+    <a href="https://github.com/juloko/MobileECG/blob/master/project.pdf">
+      Visulização do Bancode Dados
+    </a>
+    
+  </h2>	
+  <p align="left">
+    1. Para uma melhor visualização do banco de dados de cada sensor, você pode utilizar o próprio navegador, para isso tenha instalado em sua máquina o Chrome  baixe a extensão no senguinte <a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh">link</a>.
+    2. Em seguida copie a URL de GET no tópico API abaixo, modifique "electromyografy" para o nome do sensor desejado.
+</p>
    
 <p align="left">
    <h2 align="left">Api</h2>	
 
-  `` GET http://mobileecgufc.web.app/name?year=2020 ``	
+  `` GET http://mobileecgufc.web.app/name?electromyografy=2020 ``	
   > ``` http	
   > HTTP/1.1 200 OK	
   > Content-Type: application/json 	
