@@ -1,7 +1,8 @@
 /* eslint-disable no-shadow */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-useless-catch */
-const admin = require('firebase-admin');
+const generateUniqueId = require('@MobileECG/generateUniqueId');
+const connection = require('../database/connection');
 
 const db = admin.firestore();
 

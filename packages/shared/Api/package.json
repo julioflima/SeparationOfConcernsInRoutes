@@ -1,5 +1,5 @@
 {
-  "name": "@MobileECG/Api",
+  "name": "@SeparationOfConcernsInRoutes/Api",
   "version": "1.0.0",
   "main": "Api.js",
   "license": "MIT",

@@ -1,5 +1,5 @@
 {
-  "name": "@MobileECG/functions",
+  "name": "@SeparationOfConcernsInRoutes/functions",
   "version": "1.0.0",
   "description": "MobileECG UFC Cloud Functions",
   "private": "true",

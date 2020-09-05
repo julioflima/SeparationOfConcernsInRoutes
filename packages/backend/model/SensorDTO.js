@@ -24,7 +24,6 @@ module.exports = class SensorDTO {
       }),
       [Segments.BODY]: Joi.object().keys({
         value: Joi.number().required(),
-        date: Joi.string().required(),
         timestamp: Joi.number().integer().required(),
       }),
     };
@@ -36,6 +35,19 @@ module.exports = class SensorDTO {
         name: Joi.string().required(),
       }),
       [Segments.BODY]: Joi.object().keys({
+        timestamp: Joi.number().integer().required(),
+      }),
+    };
+  }
+
+  static ruleDate() {
+    return {
+      [Segments.QUERY]: Joi.object().keys({
+        name: Joi.string().required(),
+      }),
+      [Segments.BODY]: Joi.object().keys({
+        value: Joi.number().required(),
+        date: Joi.string().required(),
         timestamp: Joi.number().integer().required(),
       }),
     };

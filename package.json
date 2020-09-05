@@ -1,5 +1,5 @@
 {
-  "name": "MobileECG",
+  "name": "SeparationOfConcernsInRoutes",
   "version": "2.0.0",
   "main": "index.js",
   "repository": "https://github.com/juloko/MobileECG.git",

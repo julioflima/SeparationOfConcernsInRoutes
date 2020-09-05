@@ -1,3 +1,3 @@
-config = require('@MobileECG/eslint-config');
+config = require('@SeparationOfConcernsInRoutes/eslint-config');
 
 module.exports = config;
