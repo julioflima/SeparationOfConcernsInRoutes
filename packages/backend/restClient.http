@@ -1,22 +1,74 @@
-### Host: Local, Port:5000
-GET http://localhost:5000/sensorTimestamps?name=electromyografy
+<p align="center">
+  <a href="https://www.linkedin.com/feed/update/urn:li:activity:6707897156927283200/">
+    <img src="https://miro.medium.com/max/875/1*Ut3E2NWKrC69M3Zne3nrOA.jpeg" align="center" weight="400px"  margin="200px"/>
+    </a>
+</p>
 
-###
-GET http://localhost:5000/sensor?name=electromyografy
+<h1 align="center">
+  <a href="https://www.linkedin.com/feed/update/urn:li:activity:6707897156927283200/">Separation of Concerns in Routes, NodeJS</a>
+</h1>
 
-###
-POST  http://localhost:5000/sensor?name=electromyografy
-Content-Type: application/json
+<p align="left">
+  Trying to use MVC methodology, b̶u̶t̶ ̶n̶o̶t̶ ̶m̶u̶c̶h̶, let’s talk about each letter in the acronym. Beyond that, I gonna show you my vision why should be more letter in there, even to simplest applications...
 
-{
-  "value":4,
-  "timestamp":1231231437
-}
+  See the complete <a href="https://www.linkedin.com/feed/update/urn:li:activity:6707897156927283200/">article</a>.
+</p>
 
-###
-DELETE http://localhost:5000/sensor?name=electromyografy
-Content-Type: application/json
+<h2 align="left">
+  <a href="https://mobileecgufc.web.app/">
+    REST HTTP
+  </a>
+</h2>
 
-{
-  "timestamp":1231231435
-}
+<p align="left">
+   <h2 align="left">Api</h2>
+   <h5 align="left">Pega todos os timestamps cadastrados neste sensor, caso queira se remover algum dado.</h5>
+
+  <h5 align="left">Get all dada from this sensor.</h5>
+
+  `` GET https://localhost:3000/sensor?name=electromyografy ``
+  > ``` http
+  > HTTP/1.1 200 OK
+  > Content-Type: application/json
+  > [
+  >   {
+  >     "value": 1,
+  >     "date": "1970/01/15 06:00:31.434000000",
+  >     "timestamp": 1231231434
+  >   },
+  >   {
+  >   "value": 2,
+  >   "timestamp": 1231231435,
+  >   "date": "1970/01/15 06:00:31.435000000"
+  >   },
+  > ]
+  > ```
+
+  <h5 align="left">Add new data to this sensor.</h5>
+
+  `` POST https://localhost:3000/sensor?name=electromyografy ``
+  > ``` http
+  > Content-Type: application/json
+  > {
+  >   "value":1,
+  >   "date":"17-09-2020 01:32:01:30",
+  >   "timestamp":1231231434
+  > }
+  > ```
+
+  <h5 align="left">Delete one data from this sensor, indexed from timestamp.</h5>
+
+  `` DELETE https://localhost:3000/sensor?name=electromyografy ``
+  > ``` http
+  > Content-Type: application/json
+  > {
+  >   "timestamp":1231231434
+  > }
+  > ```
+  > ``` http
+  > HTTP/1.1 200 OK
+  > Content-Type: application/json
+  > Timestamp "1231231434", of sensor "electromyografy"  deleted!
+  > ```
+</p>
+
