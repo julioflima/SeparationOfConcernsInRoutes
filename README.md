@@ -6,18 +6,10 @@
 
 <h1 align="center">Separation of Concerns in Routes, NodeJS</h1>
 <p align="left">
-Trying to use MVC methodology, b̶u̶t̶ ̶n̶o̶t̶ ̶m̶u̶c̶h̶, let’s talk about each letter in the acronym. Beyond that, I gonna show you my vision why should be more letter in there, even to simplest applications.
+Trying to use MVC methodology, b̶u̶t̶ ̶n̶o̶t̶ ̶m̶u̶c̶h̶, let’s talk about each letter in the acronym. Beyond that, I gonna show you my vision why should be more letter in there, even to simplest applications... continues.
 
 See the complete <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6707897156927283200/">article</a>.
 
-</p>
-
-<p align="left">
-  <h2 align="left">
-    <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A6707897156927283200/">
-      Article
-    </a>
-  </h2>
 </p>
 
 <p align="left">
