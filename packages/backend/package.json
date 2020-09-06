@@ -1,7 +1,7 @@
 {
   "name": "@SeparationOfConcernsInRoutes/functions",
   "version": "1.0.0",
-  "description": "MobileECG UFC Cloud Functions",
+  "description": "Separation Of Concerns In Routes UFC New Methodology",
   "private": "true",
   "main": "./src/index.js",
   "scripts": {
@@ -16,21 +16,10 @@
   },
   "dependencies": {
     "@hapi/joi-date": "^2.0.1",
-    "async": "2.6.2",
-    "body-parser": "^1.18.3",
     "celebrate": "^12.1.1",
-    "consolidate": "0.15.1",
-    "cookie-parser": "1.4.3",
     "cors": "^2.8.5",
-    "engine": "0.1.12",
     "express": "4.16.4",
-    "express-session": "1.15.6",
-    "firebase-admin": "^8.10.0",
-    "firebase-functions": "^3.6.1",
-    "firebase-functions-test": "^0.2.0",
-    "handlebars": "^4.1.0",
-    "moment": "^2.26.0",
-    "request-promise": "4.2.2",
-    "moment-timezone":"0.5.31"
+    "knex": "^0.21.5",
+    "moment-timezone": "0.5.31"
   }
 }
