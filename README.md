@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://en.wikipedia.org">
+  <a href="https://mobileecgufc.web.app/">
     <img src="https://user-images.githubusercontent.com/17098382/92084131-52061480-ed9d-11ea-9acd-ec209bbed243.png" align="center" weight="400px"  margin="200px"/>
     </a>
     <span align="center" weight="400px"  margin="200px">
       ____________
     </span>
-  <a href="https://http://www.ufc.br/">
+  <a href="http://www.ufc.br/">
     <img src="https://user-images.githubusercontent.com/17098382/92084392-b45f1500-ed9d-11ea-8ec9-09c7f1283b2c.png" align="center" height="170px" padding="400"/>
   </a>
 </p>
@@ -17,13 +17,13 @@
 
 <p align="left">
   <h2 align="left">
-    <a href="https://http://www.ufc.br/">
+    <a href="https://mobileecgufc.web.app/">
       Demonstração
     </a>
 
   </h2>
   <p align="left">
-   Nesse site você poderá selecionar o sensor e ver sua atualização em tempo real.
+   Você poderá selecionar o sensor e ver sua atualização em tempo real, clicando nesse <a href="https://mobileecgufc.web.app/">link</a>.
    </p>
 </p>
 
@@ -34,13 +34,13 @@
     </a>
   </h2>
   <p align="left">
-      Confira a proposta na íntegra.
+      Confira a proposta na íntegra, clicando nesse <a href="https://github.com/juloko/MobileECG/blob/master/project.pdf">link</a>.
    </p>
 </p>
 
 <p align="left">
   <h2 align="left">
-    <a href="https://github.com/juloko/MobileECG/blob/master/project.pdf">
+    <a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh">
       Visulização do Bancode Dados
     </a>
   </h2>
