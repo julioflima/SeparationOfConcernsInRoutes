@@ -4,16 +4,27 @@
 const generateUniqueId = require('@MobileECG/generateUniqueId');
 const connection = require('../database/connection');
 
-const db = admin.firestore();
+const Cloud = require('../model/database/Cloud');
 
-const nameCollection = 'ufc';
+const db = new Cloud('development').connection();
 
 module.exports = class SensorController {
   static async index(req, res) {
     try {
       const { name } = req.query;
-      const files = [];
-      const snapshots = [];
+
+      const count = await db('todos')
+        .join('lists', 'lists.id', '=', 'todos.lists_id')
+        .count()
+        .first();
+
+      const todos = await db('todos')
+        .join('lists', 'lists.id', '=', 'todos.lists_id')
+        .select(['todos.*', 'lists.name']);
+
+      response.header('X-Total-Count', count['count(*)']);
+
+      return response.json(todos);
 
       const collections = await db.collection(nameCollection).doc(name).listCollections();
       const timestamps = collections.map((col) => col.id);

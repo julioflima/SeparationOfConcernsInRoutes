@@ -15,7 +15,7 @@ module.exports = class Cloud {
   }
 
   development() {
-    return knex({
+    return this.knex({
       client: 'sqlite3',
       connection: {
         filename: './src/database/db.sqlite',
@@ -28,7 +28,7 @@ module.exports = class Cloud {
   }
 
   production() {
-    return knex({
+    return this.knex({
       client: 'sqlite3',
       connection: {
         filename: './src/database/db.sqlite',
