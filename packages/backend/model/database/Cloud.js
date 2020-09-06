@@ -10,46 +10,61 @@ module.exports = class Cloud {
   }
 
   connection() {
-    if ((this.enviroment = 'development')) return this.development();
-    if ((this.enviroment = 'production')) return this.production();
+    const development = this.development();
+    const staging = this.staging();
+    const production = this.production();
+
+    if ((this.enviroment = 'development')) return this.knex(development);
+    if ((this.enviroment = 'staging')) return this.knex(staging);
+    if ((this.enviroment = 'production')) return this.knex(production);
   }
 
   development() {
-    return this.knex({
+    return {
       client: 'sqlite3',
       connection: {
-        filename: './src/database/db.sqlite',
+        filename: './model/database/db.sqlite',
       },
       migrations: {
-        directory: './src/database/migrations',
+        directory: './model/database/migrations',
       },
       useNullAsDefault: true,
-    });
+    };
+  }
+
+  staging() {
+    return {
+      client: 'postgresql',
+      connection: {
+        database: 'my_db',
+        user: 'username',
+        password: 'password',
+      },
+      pool: {
+        min: 2,
+        max: 10,
+      },
+      migrations: {
+        tableName: 'knex_migrations',
+      },
+    };
   }
 
   production() {
-    return this.knex({
-      client: 'sqlite3',
+    return {
+      client: 'postgresql',
       connection: {
-        filename: './src/database/db.sqlite',
+        database: 'my_db',
+        user: 'username',
+        password: 'password',
+      },
+      pool: {
+        min: 2,
+        max: 10,
       },
       migrations: {
-        directory: './src/database/migrations',
+        tableName: 'knex_migrations',
       },
-      useNullAsDefault: true,
-    });
-  }
-
-  development() {
-    return knex({
-      client: 'sqlite3',
-      connection: {
-        filename: './src/database/db.sqlite',
-      },
-      migrations: {
-        directory: './src/database/migrations',
-      },
-      useNullAsDefault: true,
-    });
+    };
   }
 };

@@ -5,11 +5,7 @@
   "private": "true",
   "main": "./src/index.js",
   "scripts": {
-    "serve": "firebase serve --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
+    "serve": "nodemon ./src/index.js"
   },
   "engines": {
     "node": "10"
@@ -20,6 +16,10 @@
     "cors": "^2.8.5",
     "express": "4.16.4",
     "knex": "^0.21.5",
-    "moment-timezone": "0.5.31"
+    "moment-timezone": "0.5.31",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

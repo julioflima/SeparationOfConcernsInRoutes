@@ -11,7 +11,6 @@ module.exports = class SensorController {
         .where({
           name,
         })
-        .select('*')
         .count()
         .first();
 
@@ -21,7 +20,7 @@ module.exports = class SensorController {
         })
         .select(['timestamp', 'date', 'value']);
 
-      res.header('X-Total-Count', count);
+      res.header('X-Total-Count', count['count(*)']);
 
       return res.status(200).json(todos);
     } catch (error) {
@@ -34,7 +33,8 @@ module.exports = class SensorController {
       const { name } = req.query;
       const { date, value, timestamp } = req.body;
 
-      await connection('todos').insert({
+      const [id] = await db('sensor').insert({
+        id: timestamp,
         name,
         date,
         value,
@@ -43,7 +43,7 @@ module.exports = class SensorController {
 
       return res
         .status(200)
-        .json({ message: `Timestamp "${timestamp}", of sensor "${name}"  added! Id:`, id });
+        .json({ message: `Timestamp '${timestamp}', of sensor '${name}'  added! Id:`, id });
     } catch (error) {
       throw error;
     }
@@ -54,17 +54,15 @@ module.exports = class SensorController {
       const { name } = req.query;
       const { timestamp } = req.body;
 
-      const data = await connection('sensor').where({ name, timestamp }).select('*').first();
+      const data = await db('sensor').where({ name, timestamp }).select('*').first();
 
-      if (!data) {
-        return res.status(404).json({ error: 'Was not found that data.' });
-      } else {
-        await connection('sensor').where({ name, timestamp }).delete();
+      if (!data) return res.status(404).json({ error: 'Was not found that data.' });
 
-        return res
-          .status(200)
-          .json({ message: `Timestamp "${timestamp}", of sensor "${name}"  deleted!` });
-      }
+      await db('sensor').where({ name, timestamp }).delete();
+
+      return res
+        .status(200)
+        .json({ message: `Timestamp '${timestamp}', of sensor '${name}'  deleted!` });
     } catch (error) {
       throw error;
     }
